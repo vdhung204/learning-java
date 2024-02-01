@@ -1,0 +1,205 @@
+	quy tắc đặt tên biến
+- có thể đặt tên biến bắt đầu bằng $ hoặc & hoặc_
+- tên biến phân biệt chữ hoa chữ thương
+- không được sử dụng dấu cách
+- ko đặt tên biến trùng với từ khoá java
+- tên biến thường được đặt bằng cách viết thường chữ đầu và viết hoa chữ tiếp theo
+- tên biến nên mô tả được nội dung nó chứa
+- có thể gán giá trị cho biến
+
+	kiểu dữ liệu trong Java
+- kiểu dữ liệu nguyên thuỷ(kiểu căn bản)
+- kiểu đối tượng
+
+kiểu nguyên thuỷ: byte, short, int, long, float, double, booleane, char
+kiểu đối tượng: String, array, Double,..
+
+kiểu dữ liệu nguyên thuỷ tất cả các chữ cái đều viết thường, kiểu đối tượng viết hoa chữ cái đầu tiên
+
+kiểu char khi khai báo giá trị nằm trong dấu nháy đơn ''
+kiểu String khi khai báo giá trị nằm trong dấu nháy kép ""
+	
+	cách khai báo hằng trong Java
+Hằng số: là những j cố định ko thay đổi
+ cách khai báo:
+	final_kiểu_dữ_liệu = giá trị;
+khi cố tình thay đổi giá trị của hằng số sẽ bị báo lỗi
+
+	cách ghi chú trong Java
+cách 1:
+ghi chú trên 1 dòng: //
+cách 2:
+ghi chú trên nhiều dòng: 
+/*
+....
+*/
+cách 3:
+chú thích để tạo tài liệu hướng dẫn Javadoc
+/**
+nội dung chú thích
+*/
+lưu ý:
+tạo khi chú khi cần thiết
+nội dung ngắn gọn, dễ hiểu
+đặt ghi chú đúng chỗ
+loại bỏ những ghi chú ko cần dùng, cập nhật lại ghi chú khi có thay đổi 
+không ghi chú lồng nhau
+
+	cách nhập dữ liệu từ bàn phím trong java
+lớp Scanner cho phép người dùng nhập từ bàn phím đối với 1 vài kiểu dữ liệu
+cách khai báo:
+	Scanner scaner = new Scanner(System.in);
+một số phương thức nhập:
+
+phương thức:	mô tả
+nextBoolean()	đọc 1 giá trị boolean từ bàn phím
+nextByte()	đọc giá trị byte
+nextDouble()	đọc giá trị double
+nextFloat()	đọc giá trị float
+nextInt()	đọc giá trị int
+nextLine()	đọc giá trị String
+nextLong()	đọc giá trị long 
+nexrshort()	đọc giá trị short
+
+	Chuyển đổi kiểu dữ liệu trong java
+dùng để chuyển từ kiểu dữ liệu này sang kiểu dữ liệu khác
+có 2 cách ép:
+cách 1: ép kiểu ngầm định(từ các kiểu nhỏ hơn sang lớn hơn)
+cách 2: ép kiểu tường minh(từ kiểu lớn hơn về kiểu nhỏ hơn)
+
+có 3 cách chuyển:
+cách 1: chuyển đổi cho các kiểu dữ liệu cơ bản
+	(new type)value;
+cách 2: chuyển đổi cho kiểu đối tượng
+	(new class)object;
+cách 3: chuyển các kiểu dữ liệu cơ bản sang đối tượng và ngược lại
+	int intObject = new Integer(32);
+
+	các phép toán cơ bản trong java
+tương tự như trong C++
+	
+	các phép toán 1 ngôi trong java
+
+	lớp Math trong java
+lớp math có 2 trường:
+E = 2,7181
+pi = 3,14
+
+	câu điều kiện if-else
+cú pháp:
+if(điều kiện){
+	//khối lệnh
+}
+hoặc
+if(điều kiện){
+	//khối lệnh 
+} else{
+	//khối lệnh
+}
+
+	câu lệnh switch-case
+cú pháp:
+switch(key) {
+case value:{
+	yield type;
+}
+default:{
+	throw new
+}
+
+	vong lặp for trong java
+cú pháp:
+	for(biến, điều kiện lặp, điều kiện tăng){
+	khối lệnh
+}
+
+	vòng lặp while
+vòng lặp while:
+	while(điều kiện){
+	//khối lệnh  
+};
+
+	vòng lặp do...while
+cú pháp:
+do{
+	//khối lệnh
+}while(điều kiện);
+
+	cách sử dụng break, continue, return 
+break: 
+unlabeled form: dùng để thoát khỏi vòng lặp như switch, for, while, do-while
+labeled form: di chuyển đến vùng labe
+continue:
+dùng để nhảy qua(skip) vòng lặp(for, while, do-while,...)
+lênh continue có 2 dạng:
+unlabeled form
+labeled form
+return: có 2 dạng
+- trả về giá trị
+- không trả về giá trị
+vd:
+hàm boolena trả về kiểu bool: return true; hoặc return false;
+hàm void không có kiểu trả về: return;
+sau khi chương trình chạy mà gặp lệnh return sẽ ngưng hàm đang thực hiện
+
+	bắt lỗi ngoại lệ bằng try-catch-finally
+sử dụng khối try-catch-finally để bắt ngoại lệ
+cú pháp: 
+try{
+//khối lệnh có thể ném ngoại lệ
+} catch (...){
+// khối lệnh sẽ thực hiện nếu ngoại lệ xảy ra
+} catch(...)
+// khối lệnh sẽ thực hiện nếu ngoại lệ xảy ra
+} finally{
+// khối lệnh sẽ thực hiện bất chấp ngoại lệ xảy ra hay không
+}
+
+	mảng trong java
+khai báo:
+type_[] array_name; //khi khai báo như này thì toàn bộ tên biến phía sau đều là mảng vd: int[] a,b; như này tạo ra 2 mảng là a,b
+type array_name[]; //khai báo như này là khai báo từng mảng 1, vd: int a[],b; khai báo như này ta được 1 mảng a và biến b kiểu int
+
+cấp phát bộ nhớ:
+	array_name = new double[n]
+	n là số phần tử của mảng
+cách nhập mảng:
+for(int i=0; i<array_name.length;i++){
+	System.out.print("Nhap phan tu thu "+i+1);
+	array_name[i] = sc.nextDouble();
+}
+trong đó hàm length dùng để lấy số phần tử của mảng
+có thể gán giá trị cho mảng:
+array_name = new double[]{1,2,3,4,5};
+
+	xây dựng lớp(clas) java
+xây dựng lớp
+khi định nghĩa lớp ta cần định nghĩa:
+- thuộc tính(biến)
+- hành vi - phương thức (hàm)
+
+định nghĩa đầy đủ của 1 lớp
+[public]	lớp được truy xuất chung cho các Package khác, mặc định chỉ có các đoạn mã trong cùng 1 gói mới có quyền truy xuất được nó
+[abstract]	lớp trừu tượng không thể khởi tạo
+[final]		lớp hằng khoonf có lớp con, không có lớp kế thừa
+class ClassName	tên lớp
+[extends SuperClass]	kế thừa lớp cha SuperClass
+[implement Interface]	giao diện được cài đặt bởi class
+{	//Member Variables Declaration	khai báo các biến
+// Methods Declarations khai báp các phương thức
+}
+
+khai báo
+cú pháp: type name;
+khai báo biến tên name dùng để tham chiếu tới kiểu dữ liệu là type
+type có thể có hai dạng:
+- Primitive types
+- Reference types
+với kiểu khai báo này giá trị của name hoặc là giá trị mặc định do java khởi gán hoặc là null
+
+sử dụng đối tượng
+- tham chiếu tới các thuộc tính
+	objectReference.variableName;
+- triệu gọi các phương thức
+objectReference.methodsName(argumentList);
+

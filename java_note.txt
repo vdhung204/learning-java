@@ -1,0 +1,110 @@
+	đặc tính của class
+-tính đóng gói
+-tính trừu tượng
+-tính kế thừa
+-tính đa hình
+
+	khi nào sử dụng vòng lặp for và while và do while:
+for: khi biết trước số lần lặp
+while: khi không xác định trước số lần lặp
+do...while: khi muốn bắt người dùng thực hiện 1 thao tác nào đó theo yêu cầu cho trước
+
+	class và interface
+class tạo ra 1 lớp các đối tượng
+
+interface: 
+ko có thân hàm, ko có phương thức, thuôc tính
+nhập
+
+	unlabeled form và labeled form
+unlabeled form: các vòng lặp bình thương ko có tên
+vd: for(int i=0; i<10; i++){
+	for(int j=0; j<10; j++){
+		if(j>10){
+			break;
+		}
+	}
+	(lenh 1)system.out.print("hello" + (i + 1)");
+}
+(lenh 2)system.out.print("hi");
+tức là sau khi gặp break lập tức thoát khỏi vòng lặp đang thực hiện để thực hiện câu lệnh 1 bên dưới
+labeled form: vòng lặp có đặt tên
+vd: 
+vonglap: for(int i=0; i<10; i++){
+	for(int j=0; j<10; j++){
+		if(j>10){
+			break vonglap;
+		}
+	}
+	(lenh 1)system.out.print("hello" + (i + 1)");
+}
+(lenh 2)system.out.print("hi"); 
+tức là sau khi gặp break ngay lập tức thoát khỏi vòng lặp và đi đến vùng label và thực hiện câu lệnh 2
+
+	lập trình thủ tục
+sử dụng các câu lệnh có cấu trúc: for, do-while, if-else...
+các ngôn ngữ Pascal, C,...
+chương trình là tập các hàm/thủ tục
+ưu điểm: 
+	+) chương trình được cục bộ hoá->dễ hiểu, dễ 	bảo trì
+	+) dễ tạo ra các thư viện phần mềm
+
+vd:
+struct Date{
+	int year,month,day;
+};
+...
+print_date(Date d){
+	printf("%d %d %d",d.year,d.month,d.day);
+}
+nhược điểm:
+	-dữ liệu và mã xử lý là tách rời
+	-người lập trình phải biết cấu trúc dữ liệu
+	-khi thay đổi cấu trúc dữ liệu thì mã xử lý(thuật toán) phải thay đổi theo
+	-khó đảm bảo tính đúng đắn của dữ liệu
+	-không tự động khởi tạo hay giải phóng dữ liệu động
+
+	lớp và đối tượng
+lớp đối tượng (class) là khuôn mẫu để sinh ra đối tượng
+đối tượng là thể hiện(instance) của 1 lớp.
+đối tượng có:
+-định danh
+-thuộc tính (dữ liệu)
+-hành vi(phương thức)
+
+	hệ thống hương đối tượng
+bao gồm một tập các đối tượng
+	- mỗi đối tượng chịu trách nhiệm một công việc
+các đối tượng tương tấc thông qua trao đổi thông điệp(message)
+các đối tượng có thể tồn tại phân tán/ có thể hoạt động song song
+vd:	mô hình hoá đối tượng
+-year
+-month
+-day
++ getDay()
++ setDay(int)
++ getMonth()
++ setMonth(int)
++ getYear()
++ setYear(int)
++ validate(int, int, int)
+
+lập trình hướng đối tượng làm tăng
+năng suất lập trình
+năng lượng phần mềm
+tính hiểu được của phần mềm
+vòng đời của phần mềm
+
+OOP và OOL
+có thể thể hiện phần nào tư tưởng đóng gói/che dấu thông tin trên ngôn ngữ thủ tục
+- không triệt để/khó kiểm soát
+ngôn ngữ hướng đối tượng cung cấp khả năng kiểm soát truy cập; ngoài ra
+-kế thừa
+-đa hình
+
+
+
+
+
+
+
