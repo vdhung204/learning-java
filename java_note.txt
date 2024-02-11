@@ -102,6 +102,8 @@ ngôn ngữ hướng đối tượng cung cấp khả năng kiểm soát truy c�
 -kế thừa
 -đa hình
 
+	this
+this để lấy thông tin trong nội bộ
 
 
 

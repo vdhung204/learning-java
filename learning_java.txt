@@ -181,7 +181,7 @@ khi định nghĩa lớp ta cần định nghĩa:
 định nghĩa đầy đủ của 1 lớp
 [public]	lớp được truy xuất chung cho các Package khác, mặc định chỉ có các đoạn mã trong cùng 1 gói mới có quyền truy xuất được nó
 [abstract]	lớp trừu tượng không thể khởi tạo
-[final]		lớp hằng khoonf có lớp con, không có lớp kế thừa
+[final]		lớp hằng không có lớp con, không có lớp kế thừa
 class ClassName	tên lớp
 [extends SuperClass]	kế thừa lớp cha SuperClass
 [implement Interface]	giao diện được cài đặt bởi class
@@ -202,4 +202,12 @@ sử dụng đối tượng
 	objectReference.variableName;
 - triệu gọi các phương thức
 objectReference.methodsName(argumentList);
+
+	hiểu rõ phương thức equals & hashcode trong java
+equals: dùng để so sánh bằng phần tử class
+hashcode: tạo ra chuỗi giá trị đại diện đối tượng
+
+	
+
+
 
