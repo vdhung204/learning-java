@@ -207,7 +207,28 @@ objectReference.methodsName(argumentList);
 equals: dùng để so sánh bằng phần tử class
 hashcode: tạo ra chuỗi giá trị đại diện đối tượng
 
-	
+	ghi đè phương thức - overriding trong java
+được sử dụng trong trường hợp lớp con kế thừa từ lớp cha và muốn định nghĩa lại một phương thức đã có mặt ở lớp cha
+quy tắc:
+lớp con phải kế thừa lớp cha
+lớp con có phương thức giống lớp cha
+phương thưc của lớp con phải có tham số giống lớp cha
 
+	nạp chồng phương thức-overloading trong java
+overloading là tạo ra nhiều phương thức trùng tên trong cùng 1 lớp nhưng khác nhau phương thức truyền vào
+lý do: tăng tính sử dụng cho các phương thức bên trong một lớp
 
+	Hiểu rõ về Interface trong java
+Interface:
+1 interface trong java là 1 bản thiết kế của 1 lớp
+nó chỉ có các phương thức trừu tượng và các hằng số
+tất cả các hắng số được mặc định ở dạng public static final
+tất cả các phương thức ở dạng public
+tương tự như lớp abstract nó ko thể khởi tạo thành đối tượng
+
+mục đích: để thu được tính trừu tượng hoàn toàn và tính đa kế thừa trong java
+
+lưu ý khi sử dụng:
+một lớp có thể triển khai một hoặc nhiều interface tại 1 thời điểm
+1 interface có thể kế thừa 1 interface khác
 
