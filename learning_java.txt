@@ -232,3 +232,31 @@ lưu ý khi sử dụng:
 một lớp có thể triển khai một hoặc nhiều interface tại 1 thời điểm
 1 interface có thể kế thừa 1 interface khác
 
+	package trong java
+tập hợp thư viện nhiều lớp
+cung cấp các chức năng bảo về truy cập và quản lý không gian tên
+2 kỹ thuật
+kt đặt tên: tên của gói được viết bằng chữ thường
+kt truy xuất
+java có 2 loại gói: 
+gói được định nghĩa trước
+gói được định nghĩa bởi người dùng
+
+	phân biệt điều khiển truy xuất
+	
+	xử lý chuỗi trong java
+trong java chuỗi có 3 thể hiện
+String: bất biến
+StringBuffer: khả biến, multi-thread
+StringBuilder: khả biến, single-thread
+đều là các ký tự chứ ko phải các mảng ký tự
+
+các phương thức chuỗi String
+phương thức ktra lớp String:
+	length(), charAt(), getChars(..), getBytes(...), hashCode()
+phương thức so sánh lớp String
+equals(...), equalsIgnoreCase(...), compareTo(...),compareToIgnoreCase(...), regionMaches(...), startsWith(...),endWith(...)
+phương thức lập chỉ mục lớp String:
+indexOf(...), lastIndexOf(...)
+phương thức chuyển đổi lớp String
+substring(...), concat(...), replace(...), toLowerCase(...), toUpperCase(...), trim(), toCharArray(...), intern()

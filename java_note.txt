@@ -74,9 +74,9 @@ lớp đối tượng (class) là khuôn mẫu để sinh ra đối tượng
 
 	hệ thống hương đối tượng
 bao gồm một tập các đối tượng
-	- mỗi đối tượng chịu trách nhiệm một công việc
-các đối tượng tương tấc thông qua trao đổi thông điệp(message)
-các đối tượng có thể tồn tại phân tán/ có thể hoạt động song song
+- mỗi đối tượng chịu trách nhiệm một công việc
+- các đối tượng tương tấc thông qua trao đổi thông điệp(message)
+- các đối tượng có thể tồn tại phân tán/ có thể hoạt động song song
 vd:	mô hình hoá đối tượng
 -year
 -month
