@@ -1,0 +1,108 @@
+Git
+
+*) Git là gì ??
+- Git là hệ thống quản lý phiên bản phân tán (Distributed Version Control System – DVCS), nó là một trong những hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay. Git cung cấp cho mỗi lập trình viên kho lưu trữ (repository) riêng chứa toàn bộ lịch sử thay đổi.
+
+*) Version Control System là gì ??
+- Version Control System (VCS) là hệ thống kiểm soát các phiên bản phân tán mã nguồn mở. Các VCS sẽ lưu trữ tất cả các file trong toàn bộ dự án và ghi lại toàn bộ lịch sử thay đổi của file. Mỗi sự thay đổi được lưu lại sẽ được và thành một version (phiên bản).
+
+- VCS nghĩa là hệ thống giúp lập trình viên có thể lưu trữ nhiều phiên bản khác nhau của một mã nguồn được nhân bản (clone) từ một kho chứa mã nguồn (repository), mỗi thay đổi vào mã nguồn trên local sẽ có thể ủy thác (commit) rồi đưa lên server nơi đặt kho chứa chính.
+
+- Và một máy tính khác nếu họ có quyền truy cập cũng có thể clone lại mã nguồn từ kho chứa hoặc clone lại một tập hợp các thay đổi mới nhất trên máy tính kia.
+
+- Lập trình viên có thể xem lại danh sách các sự thay đổi của file như xem một dòng thời gian của các phiên bản. Mỗi phiên bản bao gồm: nội dung file bị thay đổi, ngày giờ sửa đổi, người thay đổi là ai, lý do thay đổi hay tên phiên bản…
+
+*) Tại sao lại dùng git ??
+- Các dự án thực tế thường có nhiều lập trình viên làm việc song song. Vì vậy, một hệ thống kiểm soát phiên bản như Git là cần thiết để đảm bảo không có xung đột code giữa các lập trình viên.
+
+- Ngoài ra, các yêu cầu trong các dự án như vậy thay đổi thường xuyên. Vì vậy, một hệ thống kiểm soát phiên bản cho phép các nhà phát triển revert và quay lại phiên bản cũ hơn của code.
+
+- Cuối cùng, đôi khi một số dự án đang được chạy song song liên quan đến cùng một cơ sở code. Trong trường hợp như vậy, khái niệm phân nhánh trong Git là rất quan trọng.
+
++ Dễ sử dụng, thao tác nhanh, gọn, lẹ và rất an toàn.
++ Sễ dàng kết hợp các phân nhánh (branch), có thể giúp quy trình làm việc code theo nhóm đơn giản hơn rất nhiều.
++ Chỉ cần clone mã nguồn từ kho chứa hoặc clone một phiên bản thay đổi nào đó từ kho chứa, hoặc một nhánh nào đó từ kho chứa là bạn có thể làm việc ở mọi lúc mọi nơi.
++ Triển khai sản phẩm của một cách dễ dàng .
+
+*) Gitflow là gì ??
+- Gitflow là khái niệm chỉ cách phân nhánh và phối hợp phát triển, phát hành tính năng bằng cách sử dụng git.
+
+- có nhiều mô hình được Gitflow giới thiệu, xong phổ biến nhất là mô hình phân nhánh của Vincent Driessen
+
+- Về cơ bản Gitflow triển khai theo mô hình của Vincent Driessen như sau:
++) Branch khởi đầu là master. Khi bắt đầu phát triển tính  năng sẽ checkout từ master ra develop
++) Mỗi tính năng sẽ checkout tiếp từ develop ra các nhánh có prefix là feature/. (ví dụ tính năng login là feature/login, tính năng logout là feature/logout…) và phát triển độc lập với nhau. Sau khi hoàn thành thì merge feature vào develop.
++) Đến kì release sẽ merge develop vào release, nhánh release đóng vai trò như là môi trường stagging của dự án. Đó là môi trường gần giống với production nhất. Nhánh release lúc này chỉ gồm các commit fixbug mà không bao gồm commit thêm tính năng nào nữa. Nếu có fixbug phát sinh trên release thì merge lại vào develop.
++) Khi bug đã hết cũng là lúc tiến hành merge release vào master. Tại đây ta có thể đánh dấu tag cho commit đó để làm dấu hiệu phiên bản phát hành tiện lợi cho việc theo dõi và truy vết.
++) Khi chạy production không thể tránh khỏi lỗi phát sinh, khi đó chúng ta checkout từ master ra nhánh có tiền tố hotfix/ để fixbug. Sau khi sửa lỗi xong thì merge nhánh vừa tạo vào develop, từ develop kiểm tra thấy bản fix đã hoạt động thì tiếp tục merge hotfix vào master và kết thúc phiên sửa lỗi.
+
+=> Như đã thấy với mô hình gitflow trên chúng ta cần có ít nhất 3 môi trường để chạy mã là production, stagging và develop tương ứng với 3 nhánh master, release và develop. Tuy nhiên trong thực tế không nhất thiết phải có đầy đủ cả 3 mà tuỳ vào dự án chúng ta sẽ chỉnh sửa lại gitflow cho phù hợp và tối ưu nhất.
+
+*) Các lệnh Git cmd hay gặp:
+1. git clone
+- Clone mã nguồn hiện có từ repository
+- Cú pháp: git clone <link repository muốn clone>
+2. git branch
+- Nhánh là một phần không thể thiếu trong Git. Bằng cách sử dụng các nhánh, các lập trình viên có thể làm việc đồng thời trên cùng một dự án. Bên cạnh đó, ta có thể sử dụng lệnh git branch để tạo, liệt kê và xóa các nhánh.
+- Tạo nhánh mới: git branch <branch name>
+- Đẩy nhánh vừa tạo lên kho lưu trữ: git push -u <remote> <branch-name>
+- Xem nhánh: git branch or git branch --list
+- Xoá nhánh: git branch -d <branch-name>
+3. git checkout
+- Để làm việc trong một nhánh, trước tiên bạn cần chuyển sang nhánh đó. Mọi người chủ yếu sử dụng git checkout để chuyển từ nhánh này sang nhánh khác. 
+- Cú pháp: git checkout <name-of-your-branch>
+
+* Những thay đổi trong nhánh hiện tại phải được commit hoặc lưu trữ trước khi chuyển đổi
+* Nhánh muốn kiểm tra phải tồn tại ở local của bạn
+
+- Ngoài ra còn có một lệnh tắt cho phép bạn tạo và chuyển sang nhánh cùng lúc:
+- Cú pháp: git checkout -b <name-of-your-branch>
+
+4. git status
+- lệnh này cung cấp cho chúng ta tất cả thông tin cần thiết về nhánh hiện tại. 
+- Cú pháp: git status
+
+5. git add
+- Khi chúng ta tạo, sửa đổi hoặc xóa một tệp, những thay đổi này sẽ xảy ra trong cục bộ của chúng ta và sẽ không được đưa vào lần commit tiếp theo (trừ khi chúng ta thay đổi cấu hình).
+
+- Chúng ta cần sử dụng lệnh git add để đưa các thay đổi của (các) tệp vào lần commit tiếp theo. 
+
+- Để thêm một tệp: git add <file>
+- Để thêm nhiều tệp cùng một lúc: git add -A
+
+* Lưu ý: Lệnh git add không thay đổi kho lưu trữ và các thay đổi không được lưu cho đến khi sử dụng git commit.
+
+6. git commit
+- Đây là lệnh cực kì phổ biến và Git commit có tác dụng giúp Git lưu lại một ảnh chụp màn hình/snapshot đối với các thay đổi trong thư mục trong quá trình làm việc với Git. 
+
+- Với Git, khi Commit, các thay đổi sẽ được tự động lưu lại và thường nằm trong mục Staging Area. Trong hệ thống cũng sẽ lưu lại tên người chỉnh sửa để người dùng có thể dễ dàng theo dõi. Hệ thống cũng sẽ lưu trữ tên và email của người thực hiện chính sửa. Bạn cũng có thể khôi phục lại các tệp tin và chuyển sang một nhánh khác. 
+- Cú pháp: git commit -m "commit message"
+
+
+7. git push
+- Sau khi thực hiện các thay đổi của mình, điều tiếp theo bạn muốn làm là gửi các thay đổi của mình đến máy chủ từ xa. Git Push sẽ giúp tải các commit của bạn lên kho lưu trữ từ xa.
+
+- cú pháp: git push <remote> <branch name>
+
+Tuy nhiên, nếu nhánh của bạn mới được tạo, thì bạn cũng cần tải nhánh đó lên bằng lệnh sau:
+
+- cú pháp: git push --set-upstream <remote> <name-of-your-branch>
+
+hoặc
+git push -u origin <branch-name>
+
+8. git pull
+- Lệnh git pull được sử dụng để nhận các bản cập nhật từ từ xa. Lệnh này là sự kết hợp của git fetch và git merge, có nghĩa là khi chúng ta sử dụng git pull, nó sẽ nhận các bản cập nhật từ kho lưu trữ từ xa (git fetch) và ngay lập tức áp dụng các thay đổi mới nhất trong local của bạn (git merge).
+- cú pháp: git pull <remote>
+
+9. git revert
+- Đôi khi chúng ta cần hoàn tác những thay đổi mà chúng ta đã thực hiện. Chúng ta có thể thay đổi từ local hoặc từ xa (tùy thuộc vào nhu cầu của bạn), nhưng bạn phải cẩn thận sử dụng các lệnh này để tránh xóa nhầm những thứ không mong muốn.
+
+Một cách an toàn hơn mà chúng ta có thể hoàn tác các commit của mình là sử dụng git revert . Để xem lịch sử commit, trước tiên chúng ta cần sử dụng: git log -- oneline
+sau đó chỉ định hash code bên cạnh commit mà bạn muốn hoàn tác sau đó bấm shift + q để thoát
+
+10. git merge
+- Git Merge là một lệnh dùng để hợp nhất các chi nhánh độc lập thành một nhánh duy nhất trong Git.
+
+- Khi sử dụng lệnh hợp nhất trong Git, chỉ có nhánh hiện tại được cập nhật để phản ánh sự hợp nhất, còn nhánh đích sẽ không bị ảnh hưởng. Điều này có nghĩa rằng, Git Merge thường được sử dụng kết hợp với git checkout để chọn nhánh hiện tại và git branch để xóa nhánh nguồn đã lỗi thời.
+- cú pháp: git merge < branch-name>

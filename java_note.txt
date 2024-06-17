@@ -105,6 +105,9 @@ ngôn ngữ hướng đối tượng cung cấp khả năng kiểm soát truy c�
 	con trỏ this
 this để lấy thông tin trong nội bộ
 
+từ khoá static
+dữ liệu dùng chung cho mọi đối tượng cùng lớp
+
 	
 
 

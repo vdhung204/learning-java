@@ -1,0 +1,11 @@
+Unity Editor
+
+- Scene: nơi làm việc, setup các bố cục, gameobject,...
+- Game: view ng chơi nhìn thấy, được quyết định bởi camera
+- Asset Store: cửa hàng unity, tải/mua các asset làm game
+- Project: nơi quản lý các forder, thư mục
+	+) Scene: cảnh hiên tại/ level,...
+- Imspector: tất các thông tin của object trong Scene
+- Layout: sắp xếp bố cục làm việc với Unity Editor
+
+

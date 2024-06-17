@@ -1,0 +1,43 @@
+*) Frame: khung hình, được vẽ lên màn hình thiết bị tại một thời điểm nhất định
+*) Scene: là 1 cảnh game, không gian game,nơi thiết lập các bố cục của các gameObject, hoặc phần chứa các thiết lập giao diện như các menu trong game,... 
+* Layer Unity
+- Layer: là công cụ cho phép tách các GameObject trong scenes(cảnh). Có thể dùng layer thông qua UI với scrips để chỉnh sửa cách GameObject trong scenes tương tác với nhau
++ Layer giúp tổ chức GameObject trong Scenes, nếu tạo 1 layer và gán cho GameObject, ta có thể chỉnh sửa cách  gameobject tương tác với GameObject khác
++ có 2 cách tạo Layer mới: 
+	+) chọn Tag and Layer Window ( main menu: Edit > Project Settings > Tag and Layers > Layer)
+	+) chọn gameobject, chọn Layer trong dropdown trong cửa sổ Inspector và chọn Add Layer trong menu
+ * Shorting Layer:
+- gắn với các gameObject
+- Lớp sắp xếp được sử dụng kết hợp với Sprite đồ họa trong hệ thống 2D. Sắp xếp đề cập đến thứ tự lớp phủ của các Sprites khác nhau.
+
+* các hàm cơ bản của MonoBehaviour Unity:
+MonoBehaviour là lớp nền cho các Scrips được gắn vào gameobject trong Unity. Một lớp Mono có sẵn rất nhiều hàm để thực thi các chức năng khác nhau của gameobject. Awake, Start, OnEnable là một trong số đó. Về cơ bản 3 hàm đó đều được gọi đến khi một gameobject được tạo ra. Chúng được coi là các hàm khởi tạo.
+*) Awake: 
++ GameObject gốc đang hoạt động và khởi chạy khi tải Scene 
++ GameObject gốc chuyển từ không hoạt động sang hoạt động 
++ Sau khi khởi tạo GameObject gốc được tạo bằng Object.Instantiate
+
+*) OnEnable: hàm này được gọi khi đối tượng được kích hoạt và hoạt động
++ Vì chức năng này được thực thi khi đối tượng được bật nên nó sẽ được thực thi bất cứ khi nào vào Play Model (với đối tượng được bật).
+
+*) Start:  được gọi trên frame khi tập lệnh được bật ngay trước khi bất kỳ phương thức Update nào được gọi lần đầu tiên
++ hàm Start có thể không được gọi trên cùng frame với Awake nếu tập lệnh ko được bật vào thời điểm khởi tạo
+
+*) FixUpdate: được gọi mỗi 0.02s
+=> ứng dụng: vào vật lý, di chuyển,...
+
+*) Update: kiểm tra mỗi frame
+=> hay dùng để ktra check win,...
+
+*) OnDisable: khi vật bị tắt xuống
+
+* thứ tự thực thi:
+Awake => OnEnable => Start
+ => tại sao hay dùng hàm Start ??
+ - việc thực thi phụ thuộc nhiều vào CPU, Unity là engine hỗ trợ build đa nền tảng. Tức là game sẽ chạy trên nhiều nền tảng và nhiều hệ máy khác nhau. Điều này có nghĩa tốc độ xử lý CPU khác nhau.
+- Nếu sử dụng Awake với quá nhiều gameobject cùng khởi tạo1 lúc với các CPU yếu dễ bị nghẽn và bị bỏ qua
+- Còn với OnEnable là hàm thực thi sau Awake tính từ khi khởi tạo gameobject nhưng ngoài ra OnEnable còn được gọi khi gameobject hoạt động
+- Do vậy, Start được cho là phương án an toàn trong việc xử lý các tác vụ của gameobject khi mới khởi tạo
+
+
+ 

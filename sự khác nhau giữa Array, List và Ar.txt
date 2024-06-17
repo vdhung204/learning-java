@@ -1,0 +1,21 @@
+sự khác nhau giữa Array, List và ArrayList
+
+* Kích thước:
+- Array có kích thước cố định khi được khởi tạo, không thể thay đổi kích thước 
+- List có thể thay đổi kích thước linh hoạt, có thể thay đổi số lượng phần tử 1 cách linh hoạt mà không cần xác định kích thước trước
+- ArrayList tương tự như List, ArrayList linh hoạt về kích thước, không cần xác định trước kích thước
+* lưu trữ:
+- Array lưu trữ các phần tử có cùng kiểu dữ,phải khai báo kiểu dữ liệu trước 
+- List tương tự Array, các pt được lưu trữ phải có cùng kiểu dữ liệu và kiểu dữ liệu phải được xác định trước
+- ArrayList tương tự như List nhưng ArrayList có thể lưu trữ các phần tử mà không cần phải cùng kiểu dữ liệu, cũng ko cần phải xác định kiểu dữ liệu trước
+* thao tác dữ liệu
+- Array thông qua các chỉ số của mảng để thực hiện các thao tác như thêm, xoá sửa nhưng không thể thay đổi kích thước của mảng
+- List truy cập các pt thông qua chỉ số mảng, List có thể thực hiện các thao tác thêm, xoá, sửa, cập nhật và thay đôi kích thước mảng
+- ArrayList có thể truy cập qua chỉ số mảng, tương tự như List, ArrayList có thể truy cập đến các pt ngẫu nhiên trong mảng
+* performence
+- Array có thể nhanh hơn do truy cập các pt qua chỉ số và kích thước mảng cố định
+- List có thể chậm hơn do kích thước mảng không cố định
+- ArrayList có thể chậm hơn List nhưng đối tượng nhiều pt thì ArrayList cho tốc độ tốt hơn
+* tính linh hoạt
+- Array ít linh hoạt hơn, do phải xác định kích thước, chỉ số pt cần tìm,...
+- List linh hoạt hơn

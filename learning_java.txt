@@ -172,7 +172,7 @@ trong đó hàm length dùng để lấy số phần tử của mảng
 có thể gán giá trị cho mảng:
 array_name = new double[]{1,2,3,4,5};
 
-	xây dựng lớp(clas) java
+	xây dựng lớp(class) java
 xây dựng lớp
 khi định nghĩa lớp ta cần định nghĩa:
 - thuộc tính(biến)
@@ -260,3 +260,21 @@ phương thức lập chỉ mục lớp String:
 indexOf(...), lastIndexOf(...)
 phương thức chuyển đổi lớp String
 substring(...), concat(...), replace(...), toLowerCase(...), toUpperCase(...), trim(), toCharArray(...), intern()
+
+	Mảng và cách copy mảng
+khởi tạo mảng
+new elementType[arraySize]
+
+sao chép dữ liệu trên mảng
+- toán tử gán
+clone()
+System.arrayCopy()
+
+	xây dựng phương thức so sánh lớn bé compareTo cho đối tượng java
+
+	tách chuỗi thành mảng trong java
+sử dụng hàm split()
+ 
+	các lớp TIME, DATE, DATEFORMAT, CALENDAR trogn java
+ 
+	
